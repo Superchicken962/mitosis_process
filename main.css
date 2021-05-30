@@ -1,0 +1,314 @@
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+}
+
+.title1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+#startbutton {
+    display: block;
+    margin: auto;
+    padding: 22px;
+    background-color: gold;
+    border: 2px solid black;
+    width: 12%;
+    color: white;
+    margin-top: 15%;
+}
+
+#int-pro-button {
+    display: none;
+    margin: auto;
+    padding: 22px;
+    background-color: gold;
+    border: 2px solid black;
+    width: 12%;
+    color: white;
+    margin-top: 1%;
+    animation-name: button-fade-out;
+    animation-duration: 1.5s;
+    animation-play-state: paused;
+}
+
+#int-pro-button:hover {
+    background-color: goldenrod;
+}
+
+#int-pro-button:disabled {
+    color: grey;
+    background-color: lightgrey;
+}
+
+#startbutton:hover {
+    background-color: goldenrod;
+}
+
+#startbutton:active {
+    padding: 20px;
+    width: 10%;
+}
+
+#interphase {
+    display: none;
+}
+
+#prophase {
+    display: none;
+}
+
+#interphase-ball {
+    display: block;
+    animation-duration: 3s;
+    animation-delay: 2;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+    animation-name: interphase-ball-anim;
+    width: 15%;
+}
+
+#interphase-ball-clickready {
+    display: none;
+    width: 15%;
+    margin-left: 43.5%;
+}
+
+#prophase-ball {
+    display: none;
+    width: 15%;
+    margin-left: 43.5%;
+}
+
+#meta-anaphase_readyclick, #telephase-breakball-animate, #telephase-breakball-p1, #telephase-breakball-p2, #telephase-breakball-p3, #telephase-breakball-p4, #telephase-breakball-p5 {
+    display: none;
+    width: 15%;
+    margin-left: 43.5%;
+}
+
+#meta-anaphase_up-ball {
+    display: none;
+    width: 15%;
+    margin-left: 43.5%;
+}
+
+#meta-anaphase_down-ball {
+    display: none;
+    width: 15%;
+    margin-left: 43.5%;
+}
+
+#info-box {
+    text-align: center;
+    background-color: greenyellow;
+    border: 2px solid green;
+    padding: 8px;
+    animation-name: info-box-anim;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    display: none;
+    width: 30%;
+    animation-play-state: paused;
+    margin-top: 2%;
+}
+
+#prophase-info-box {
+    text-align: center;
+    background-color: greenyellow;
+    border: 2px solid green;
+    padding: 8px;
+    animation-name: prophase-info-box-anim;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+    display: none;
+    width: 30%;
+    animation-play-state: paused;
+    margin-top: 2%;
+}
+
+#info-box-int-pro-transition {
+    text-align: center;
+    background-color: greenyellow;
+    border: 2px solid green;
+    padding: 8px;
+    animation-name: info-box-transition-anim;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    display: none;
+    width: 30%;
+    animation-play-state: paused;
+    margin-top: 2%;
+}
+
+#changingtitle {
+    display: none;
+}
+
+#meiosis_changingtitle {
+    display: none;
+    text-align: center;
+}
+
+#choosemitosis {
+    border: 2px solid black;
+    background-color: darkgoldenrod;
+    color: white;
+    padding: 12px;
+    width: 8rem;
+    margin: auto;
+}
+
+#choosemeiosis {
+    border: 2px solid black;
+    background-color: gold;
+    padding: 12px;
+    width: 8rem;
+    margin: auto;
+}
+
+#choosemeiosis:hover {
+    background-color: goldenrod;
+}
+
+#choosemitosis:hover {
+    background-color: goldenrod;
+}
+
+#mitosismeiosis-div {
+    text-align: center;
+    display: none;
+}
+
+#pro-metaphase-ball {
+    display: none;
+    width: 15%;
+    margin-left: 43.5%;
+}
+
+#meiosis_page {
+    display: none;
+}
+
+#prophase-txt {
+    display: block;
+    animation-name: pro-meta-txt-fadeout;
+    animation-duration: 3s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+}
+
+#prophase-title {
+    display: block;
+    animation-name: pro-meta-txt-fadeout;
+    animation-duration: 3s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+}
+
+#ana_up_dropbox {
+    border: 2px solid black;
+    padding: 16px;
+    width: 1%;
+    margin-left: 65%;
+    margin-top: -37%;
+    display: none;
+}
+
+#anaphase_dragup {
+    display: none;
+    width: 2%;
+    text-align: center;
+    margin-left: 68%;
+}
+
+#ana_down_dropbox {
+    border: 2px solid black;
+    padding: 16px;
+    width: 1%;
+    margin-left: 65%;
+    margin-top: 37%;
+    display: none;
+}
+
+#anaphase_dragdown {
+    display: none;
+    width: 2%;
+    text-align: center;
+    margin-left: 68%;
+    margin-top: -37%;
+}
+
+@keyframes info-box-anim {
+    0% {margin-left: 101%; opacity: 0;}
+    100% {margin-left: 35%; opacity: 1;}
+}
+
+@keyframes info-box-transition-anim {
+    0% {margin-left: 35%; opacity: 1;}
+    100% {margin-left: -101%; opacity: 0;}
+}
+
+@keyframes interphase-ball-anim {
+    0% {margin-left: -20%; opacity: 0;}
+    100% {margin-left: 43.5%; opacity: 1;}
+}
+
+@keyframes prophase-info-box-anim {
+    0% {margin-left: 101%; opacity: 0;}
+    100% {margin-left: 35%; opacity: 1;}
+}
+
+@keyframes button-fade-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes button-fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes pro-meta-txt-fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes pro-meta-txt-fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes ana-tele-1 {
+    0% {margin-left: 35%;}
+    100% {margin-left: 120%;}
+}
+
+@keyframes ana-tele-2 {
+    0% {margin-left: 120%;}
+    100% {margin-left: 35%;}
+}
+
+@keyframes meta-go-off {
+    0% {margin-top: 2%; margin-left: 35%; opacity: 1;}
+    100% {margin-top: 50%; margin-left: 35%; opacity: 0;}
+}
+
+@keyframes ana-go-on {
+    0% {margin-top: 50%; margin-left: 35%; opacity: 0;}
+    100% {margin-top: 2%; margin-left: 35%; opacity: 1;}
+}
+
+@keyframes box-fade-out {
+    0% {margin-left: 35%; opacity: 1;}
+    100% {margin-left: 35%; opacity: 0;}
+}
+
+#error1 {
+    text-align: center;
+    display: none;
+    font-size: 32px;
+}

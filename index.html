@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="main.css">
+<title>Process of Mitosis</title>
+</head>
+<body>
+<div id="beforestart">
+    <div id="mitosismeiosis-div"><button id="choosemitosis" onclick="selectmitosis()">Mitosis</button><button id="choosemeiosis" onclick="selectmeiosis()">Meiosis</button></div>
+    <h1 id="startprocesstitle" class="title1">Mitosis Process</h1>
+    <button id="startbutton" onclick="startprocess()">Start</button>
+</div>
+
+<!-- Mitosis Page -->
+
+<div id="mitosis_page">
+    <h1 id="changingtitle" class="title1">Interphase</h1>
+    <img draggable="false" id="interphase-ball" src="assets/interphase.png">
+    <img draggable="false" id="interphase-ball-clickready" onclick="clickprophase()" src="assets/interphase.png">
+    <img draggable="false" id="pro-metaphase-ball" src="assets/animations/pro-meta.gif">
+    <img draggable="false" id="meta-anaphase_up-ball" src="assets/animations/meta-ana_up.gif">
+    <img draggable="false" id="meta-anaphase_down-ball" src="assets/animations/meta-ana_down.gif">
+    <img draggable="false" onclick="tele_click_1()" id="meta-anaphase_readyclick" src="assets/readyclicktelephase.PNG">
+    <img draggable="false" onclick="tele_click_2()" id="telephase-breakball-p1" src="assets/splitcell_p1.PNG">
+    <img draggable="false" onclick="tele_click_3()" id="telephase-breakball-p2" src="assets/splitcell_p2.PNG">
+    <img draggable="false" onclick="tele_click_4()" id="telephase-breakball-p3" src="assets/splitcell_p3.PNG">
+    <img draggable="false" onclick="tele_click_5()" id="telephase-breakball-p4" src="assets/splitcell_p4.PNG">
+    <img draggable="false" onclick="tele_click_final()" id="telephase-breakball-p5" src="assets/splitcell_p5.PNG">
+    <img draggable="false" id="telephase-breakball-animate" src="assets/animations/splitcell.gif">
+    <img draggable="false" id="prophase-ball" onclick="clickprophase()" src="assets/animations/int-pro.gif">
+    <div id="info-box"><h1>Interphase Stage</h1>
+    <p>Interphase is pretty much just a normal cell before the process of mitosis occurs</p>
+    </div>
+    <div id="info-box-int-pro-transition"><h1>Interphase Stage</h1>
+    <p>Interphase is pretty much just a normal cell before the process of mitosis occurs</p>
+    </div>
+    <div id="prophase-info-box"><h1 id="prophase-title">Prophase Stage</h1>
+    <p id="prophase-txt">In Prophase, the chromatins condense into chromasomes.<br><br><span id="prophase-tip">(Click to condense)</span></p>
+    </div>
+    <img src="assets/circle.png" id="anaphase_dragup" draggable="true" ondragstart="ana_drag(event)">
+    <div id="ana_up_dropbox" ondragover="ana_allow_drag(event)" ondrop="ana_drop(event)"></div>
+    <img src="assets/circle.png" id="anaphase_dragdown" draggable="true" ondragstart="ana_drag_down(event)">
+    <div id="ana_down_dropbox" ondragover="ana_allow_drag_down(event)" ondrop="ana_drop_down(event)"></div>
+    <button id="int-pro-button" onclick="phasebutton()">Next</button>
+</div>
+
+<!-- Meiosis Page -->
+
+<div id="meiosis_page">
+    <h1 id="meiosis_changingtitle">Meiosis Process</h1>
+    <br><br><br<p id="error1"></p>
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
